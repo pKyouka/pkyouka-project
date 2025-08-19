@@ -1,6 +1,6 @@
 ---
 import WorkBuka from "./GovTech/WorkBuka.astro";
-import WorkGovTech from "./GovTech/WorkGovTech.astro";
+import WorkLifemedia from "./GovTech/WorkLifemedia.astro";
 import WorkUnisa from "./GovTech/WorkUnisa.astro";
 ---
 
@@ -10,8 +10,12 @@ import WorkUnisa from "./GovTech/WorkUnisa.astro";
     <WorkUnisa />
   </div>
 
-  <div class="bg-govtech relative z-10 px-0 sm:px-8 md:px-12">
-    <WorkGovTech />
+  <div class="bg-lifemedia">
+    <div class="overlay-transition absolute z-0 hidden h-80 w-screen sm:block"></div>
+    <div class="px-0 pt-0 sm:px-8 md:px-12 md:pt-12 lg:pt-24">
+      <WorkLifemedia />
+      <div class="sm:pb-40"></div>
+    </div>
   </div>
 
   <div class="bg-buka relative">
@@ -46,8 +50,18 @@ import WorkUnisa from "./GovTech/WorkUnisa.astro";
   }
 
   .bg-buka {
-    background: radial-gradient(24.02% 16.2% at 34.04% 37.78%, rgba(176, 100, 124, 0.54) 0%, rgba(7, 38, 54, 0) 100%)
-        /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */,
+    background: radial-gradient(34.79% 44.8% at 15.12% 85.15%, rgba(176, 100, 124, 0.3) 0%, rgba(82, 10, 29, 0) 100%),
+      radial-gradient(29.99% 17.78% at 45.59% 25.21%, rgba(139, 69, 19, 0.4) 0%, rgba(7, 38, 54, 0) 100%),
+      radial-gradient(50% 50% at 70% 30%, rgba(176, 100, 124, 0.25) 0%, rgba(7, 38, 54, 0) 100%),
       #062536;
+    opacity: 0.8;
+  }
+  
+  .bg-lifemedia {
+    background: radial-gradient(34.79% 44.8% at 25.12% 75.15%, rgba(59, 130, 246, 0.35) 0%, rgba(30, 58, 138, 0) 100%),
+      radial-gradient(29.99% 17.78% at 65.59% 15.21%, rgba(245, 158, 11, 0.4) 0%, rgba(180, 101, 21, 0) 100%),
+      radial-gradient(40% 60% at 80% 60%, rgba(59, 130, 246, 0.2) 0%, rgba(7, 38, 54, 0) 100%),
+      #b06515;
+    opacity: 0.9;
   }
 </style>
