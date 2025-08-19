@@ -3,6 +3,7 @@ import { Image } from "@astrojs/image/components";
 
 import ProjectSIRS from "./Items/ProjectSIRS.astro";
 import ProjectNatatoko from "./Items/ProjectNatatoko.astro";
+import ProjectAndaliman from "./Items/ProjectAndaliman.astro";
 import ProjectHeader from "./ProjectHeader.astro";
 ---
 
@@ -58,6 +59,12 @@ import ProjectHeader from "./ProjectHeader.astro";
       class="aspect-auto absolute top-[-700px] left-[-250px] hidden w-auto sm:block sm:min-h-[1400px]"
     />
   </div>
+
+  <div class="mt-20 px-0 sm:px-8 md:px-12 lg:mt-24 xl:mt-32">
+    <ProjectAndaliman />
+    <div class="overlay-andaliman absolute bottom-0 right-0 hidden w-screen sm:block sm:h-[2050px] xl:h-[2000px]"></div>
+  </div>
+
   <div class="sm:pt-32"></div>
 </section>
 
@@ -70,7 +77,7 @@ import ProjectHeader from "./ProjectHeader.astro";
 
   const defaultEasing = [0.17, 0.55, 0.55, 1];
 
-  const projects = ["natanya", "natatoko"];
+  const projects = ["natanya", "natatoko", "andaliman"];
 
   projects.forEach((project) => {
     inView(`#project-${project}`, () => {
@@ -83,7 +90,7 @@ import ProjectHeader from "./ProjectHeader.astro";
     });
   });
 
-  const buttons = ["#btn-live-in-production-natatoko-com", "#btn-live-in-production-natanya-app"];
+  const buttons = ["#btn-live-in-production-natatoko-com", "#btn-live-in-production-natanya-app", "#btn-live-in-production-toeic-andaliman"];
 
   buttons.forEach((btn) => {
     inView(`${btn}`, () => {
@@ -110,6 +117,15 @@ import ProjectHeader from "./ProjectHeader.astro";
       radial-gradient(21.08% 15.61% at 21.46% 19.85%, rgba(225, 29, 72, 0.1) 0%, rgba(255, 241, 242, 0) 100%);
   }
 
+  .overlay-andaliman {
+    background: radial-gradient(
+        136.64% 61.58% at 89.55% 104.49%,
+        rgba(59, 130, 246, 0.17) 0%,
+        rgba(241, 245, 255, 0) 100%
+      ),
+      radial-gradient(21.08% 15.61% at 21.46% 19.85%, rgba(147, 51, 234, 0.1) 0%, rgba(245, 243, 255, 0) 100%);
+  }
+
   @media (max-width: 1268px) {
     .overlay-natatoko {
       background: radial-gradient(
@@ -118,6 +134,15 @@ import ProjectHeader from "./ProjectHeader.astro";
           rgba(255, 241, 242, 0) 100%
         ),
         radial-gradient(21.08% 15.61% at 21.46% 19.85%, rgba(225, 29, 72, 0.45) 0%, rgba(255, 241, 242, 0) 100%);
+    }
+
+    .overlay-andaliman {
+      background: radial-gradient(
+          136.64% 61.58% at 89.55% 104.49%,
+          rgba(59, 130, 246, 0.17) 0%,
+          rgba(241, 245, 255, 0) 100%
+        ),
+        radial-gradient(21.08% 15.61% at 21.46% 19.85%, rgba(147, 51, 234, 0.45) 0%, rgba(245, 243, 255, 0) 100%);
     }
   }
 </style>
