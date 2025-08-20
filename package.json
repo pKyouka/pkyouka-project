@@ -46,9 +46,6 @@
   "volta": {
     "node": "^22.0.0"
   },
-  "engines": {
-    "node": "22.0.0"
-  },
   "devDependencies": {
     "@types/react-scroll": "^1.8.10",
     "prettier": "^2.8.8",
